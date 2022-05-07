@@ -1,10 +1,14 @@
+import { ColorModeScript } from '@chakra-ui/react'
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import theme from './../theme';
 
 const Home: NextPage = () => {
   return (
+    <>
+    <ColorModeScript initialColorMode={theme.config.initialColorMode} />
     <div className={styles.container}>
       <Head>
         <title>Create Next App</title>
@@ -66,6 +70,7 @@ const Home: NextPage = () => {
         </a>
       </footer>
     </div>
+    </>
   )
 }
 
